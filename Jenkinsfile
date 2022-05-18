@@ -14,7 +14,7 @@ pipeline {
             
             sh 'pwd'
             sh 'ls -al'
-            sh 'cp /var/lib/jenkins/workspace/pipeline2/packer-terraform-jenkins-docker/*.* .'
+            sh 'cp /var/lib/jenkins/workspace/pipeline2/packer-terraform-jenkins-docker'
             sh 'ls -al'
             sh 'packer build packer.json'
             }
