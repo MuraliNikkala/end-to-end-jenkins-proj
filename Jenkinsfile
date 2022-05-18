@@ -29,8 +29,8 @@ pipeline {
 
         stage('Build Docker Image') {
           steps {
-            sh 'cd /var/lib/jenkins/workspace/pipeline2/packer-terraform-jenkins-docker'
-            sh 'cp  /var/lib/jenkins/workspace/pipeline2/packer-terraform-jenkins-docker/* /var/lib/jenkins/workspace/pipeline2'
+            sh 'cd /var/lib/jenkins/workspace/Pipeline-Testing/packer-terraform-jenkins-docker'
+            sh 'cp  /var/lib/jenkins/workspace/Pipeline-Testing/packer-terraform-jenkins-docker/* /var/lib/jenkins/workspace/pipeline2'
             sh 'docker build -t sreeharshav/pipelinetestprod:${BUILD_NUMBER} .'
             }
         }
