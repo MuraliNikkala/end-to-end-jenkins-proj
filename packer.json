@@ -1,8 +1,6 @@
 {
   "variables": {
-    "aws_access_key": "{{env `AWS_ACCESS_KEY_ID`}}",
-    "aws_secret_key": "{{env `AWS_SECRET_ACCESS_KEY`}}",
-    "us_east_1_ami": "ami-04763b3055de4860b",
+    "us_east_1_ami": "ami-0c4f7023847b90238",
     "name": "aws-docker-ce-base",
     "us_east_1_name": "ubuntu-xenial-docker-ce-base",
     "ssh_username": "ubuntu"
@@ -10,9 +8,7 @@
   "builders": [
     {
       "name": "{{user `us_east_1_name`}}",
-      "type": "amazon-ebs",
-      "access_key": "AKIA2QEFLENWCZ57K3KB",
-      "secret_key": "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",
+      "type": "amazon-ebs"
       "region": "us-east-1",
       "vpc_id": "",
       "subnet_id": "",
