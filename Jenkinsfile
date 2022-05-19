@@ -23,7 +23,7 @@ pipeline {
 		stage('Deploy EC2 Server') {
           steps {
 		    sh 'terraform init'
-            sh 'terraform apply --auto-approve'
+            sh 'terraform plan'
             }
         }
 
