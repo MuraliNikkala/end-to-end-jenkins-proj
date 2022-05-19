@@ -37,7 +37,7 @@ pipeline {
 
         stage('Push Image to Docker Hub') {
           steps {
-           sh    'docker push sreeharshav/pipelinetestprod:${BUILD_NUMBER}'
+           sh    'docker push muralinikkala/pipelinetestprod:${BUILD_NUMBER}'
            }
         }
 
@@ -45,7 +45,7 @@ pipeline {
           steps {
 		    sh 'sleep 10s'
             sh    'docker -H tcp://10.1.1.111:2375 stop prodwebapp1 || true'
-            sh    'docker -H tcp://10.1.1.111:2375 run --rm -dit --name prodwebapp1 --hostname prodwebapp1 -p 8000:80 sreeharshav/pipelinetestprod:${BUILD_NUMBER}'
+            sh    'docker -H tcp://10.1.1.111:2375 run --rm -dit --name prodwebapp1 --hostname prodwebapp1 -p 8000:80 muralinikkala/pipelinetestprod:${BUILD_NUMBER}'
             }
         }
 
