@@ -31,7 +31,7 @@ pipeline {
           steps {
             sh 'mkdir -p /var/lib/jenkins/workspace/pipeline2'
 	    sh 'cd /var/lib/jenkins/workspace/Pipeline-Testing/packer-terraform-jenkins-docker'
-	    sh 'cp  /var/lib/jenkins/workspace/Pipeline-Testing/packer-terraform-jenkins-docker/* /var/lib/jenkins/workspace/pipeline2'
+	    sh 'cp  /var/lib/jenkins/workspace/Pipeline-Testing/packer-terraform-jenkins-docker/* /var/lib/jenkins/workspace/pipeline2/'
             sh 'docker build -t muralinikkala/pipelinetestprod:${BUILD_NUMBER} .'
             }
         }
