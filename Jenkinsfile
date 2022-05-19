@@ -20,12 +20,12 @@ pipeline {
             }
         }
 				
-		stage('Deploy EC2 Server') {
-          steps {
-		    sh 'terraform init'
-            sh 'terraform plan'
-            }
-        }
+		#stage('Deploy EC2 Server') {
+          #steps {
+		    #sh 'terraform init'
+            #sh 'terraform apply --auto-approve'
+            #}
+        #}
 
         stage('Build Docker Image') {
           steps {
